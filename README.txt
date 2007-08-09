@@ -22,13 +22,9 @@
 ===============================================================================
 				        About ThinWire(R) Form Creator	
 ===============================================================================
-The Form Creator application, while not 100% complete or function yet, provides
+The Form Creator application, while not 100% complete or functional yet, provides
 developers with a way to visually layout forms. Here are a list of some of its
 features:
- by performing drag and drop
-operations and visual resizing and positioning.  Additionally, the Form Creator
-provides an extensive properties panel that makes it easy to adjust most of
-the settings of any component you are visually laying out.
 
     * manage multiple forms under a single project (mostly working)
     * load and save the forms to a project file (half done)
@@ -56,10 +52,10 @@ powerful.
 ===============================================================================
                            Building the Form Creator
 ===============================================================================
-The build process for the demo is defined using the Apache Ant build tool. It
-has only been built using Ant 1.6 or greater, but it may build correctly with
-earlier releases as well.  You can learn about the Apache Ant project and
-download a working version from: http://ant.apache.org/
+The build process for the application is defined using the Apache Ant build
+tool. It has only been built using Ant 1.6 or greater, but it may build
+correctly with earlier releases as well.  You can learn about the Apache Ant
+project and download a working version from: http://ant.apache.org/
 
 Once you have Ant installed and added to your system path, you can build the
 demo simply by typing 'ant dist' at the command shell from the 'build'
@@ -71,3 +67,8 @@ directory.  The following Ant build targets are supported:
 	
  source      create a source only distribution that contains
              everything necessary to build the application.
+
+NOTE: No Java 1.4 build is provided, but if you want you can use the retroweaver
+      tool to create a Java 1.4 version.  Take a peek at the build.xml script
+      in the various ThinWire demos to get a feel for how this is done.
+      
