@@ -22,21 +22,19 @@
 */
 package thinwire.apps.formcreator;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.logging.Logger;
 
 import thinwire.apps.formcreator.MessageBus.Event;
 import thinwire.ui.Component;
-import thinwire.ui.Container;
-import thinwire.ui.Divider;
-import thinwire.ui.DropDownGridBox;
-import thinwire.ui.EditorComponent;
 import thinwire.ui.Label;
+import thinwire.ui.LabelComponent;
 import thinwire.ui.MaskEditorComponent;
 import thinwire.ui.Panel;
-import thinwire.ui.Container.ScrollType;
-import thinwire.ui.TabSheet;
-import thinwire.ui.TextComponent;
 import thinwire.ui.event.ActionEvent;
 import thinwire.ui.event.ActionListener;
 import thinwire.ui.event.PropertyChangeEvent;
@@ -202,12 +200,12 @@ class PropertySheet extends AbstractSheet {
     
     private void selectProperty(MaskEditorComponent editor) {
         if (activeEditor != null) {
-            Label lbl = activeEditor.getLabel();
+            LabelComponent lbl = activeEditor.getLabel();
             lbl.getStyle().getBackground().setColor(Color.WINDOW);
             lbl.getStyle().getFont().setColor(null);
         }
 
-        Label lbl = editor.getLabel();
+        LabelComponent lbl = editor.getLabel();
 
         activeEditor = editor;
         lbl.getStyle().getBackground().setColor(Color.HIGHLIGHT);

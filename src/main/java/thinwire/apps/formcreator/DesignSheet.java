@@ -66,7 +66,7 @@ class DesignSheet extends TabSheet {
     
     private MessageBus.Listener addComponentListener = new MessageBus.Listener() {
         public void eventOccured(Event ev) {
-            if (getContainer() != null && ((TabFolder)getContainer()).getCurrentIndex() == ((TabFolder)getContainer()).getChildren().indexOf(DesignSheet.this)) {
+            if (getContainer() != null && ((TabFolder)getParent()).getCurrentIndex() == ((TabFolder)getParent()).getChildren().indexOf(DesignSheet.this)) {
                 if (ev.getData() instanceof Component) {
                     Component comp = (Component)ev.getData();
                     
@@ -80,7 +80,7 @@ class DesignSheet extends TabSheet {
 
     private MessageBus.Listener deleteComponentListener = new MessageBus.Listener() {
         public void eventOccured(Event ev) {
-            if (getContainer() != null && ((TabFolder)getContainer()).getCurrentIndex() == ((TabFolder)getContainer()).getChildren().indexOf(DesignSheet.this)) {
+            if (getContainer() != null && ((TabFolder)getParent()).getCurrentIndex() == ((TabFolder)getParent()).getChildren().indexOf(DesignSheet.this)) {
                 if (ev.getData() instanceof Component) {
                     Component comp = (Component)ev.getData();
                     ComponentDesigner designer = compToDesign.get(comp);

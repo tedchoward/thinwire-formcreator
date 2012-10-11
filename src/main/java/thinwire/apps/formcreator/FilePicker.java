@@ -235,7 +235,7 @@ class FilePicker extends thinwire.ui.Dialog {
         GridBox gb = ddgb.getComponent();
         gb.setHeight(80);
         gb.getColumns().add(new GridBox.Column());
-        gb.getColumns().add(new GridBox.Column("REGEX", false));
+        gb.getColumns().add(new GridBox.Column("REGEX", false, (Object[])null));
         
         if (fileTypes == null) {
             fileTypes = new HashMap<String, String>();
@@ -329,11 +329,11 @@ class FilePicker extends thinwire.ui.Dialog {
         
         FileGrid() {
             List<Column> cols = getColumns();
-            cols.add(new Column("Name", true, 250));
-            cols.add(new Column("Size", true, 50, AlignTextComponent.AlignX.RIGHT));
-            cols.add(new Column("Type", true, 100));
-            cols.add(new Column("Date modified", true, 70));
-            cols.add(new Column("FILE", false));
+            cols.add(new Column("Name", true, 250, (Object[])null));
+            cols.add(new Column("Size", true, 50, AlignTextComponent.AlignX.RIGHT, (Object[])null));
+            cols.add(new Column("Type", true, 100, (Object[])null));
+            cols.add(new Column("Date modified", true, 70, (Object[])null));
+            cols.add(new Column("FILE", false, (Object[])null));
             setVisibleHeader(true);
         }
         
